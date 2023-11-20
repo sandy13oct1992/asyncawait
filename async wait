@@ -1,0 +1,13 @@
+const party = async () => {
+ const coldDrink = new Promise((resolve, reject) =>{
+    setTimeout(() =>resolve('getColdDrink'), 3000);
+ });
+
+ const butter = new Promise((resolve, reject) => resolve('GotButter'));
+
+ let drink = await coldDrink;
+
+ console.log(`Husband got butter ${butter}`);
+return drink;
+}
+party().then((m) => console.log(m));
